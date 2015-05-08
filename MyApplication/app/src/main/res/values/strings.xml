@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Test</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <array name="names">
+        <item>UI</item>
+        <item>Android事件</item>
+        <item>Activity与Fragment</item>
+        <item>Intent and Intentfilter</item>
+    </array>
+
+    <string name="title_activity_ui">UI</string>
+    <string name="title_activity_code_view">CodeView</string>
+    <string name="title_activity_custom_view">CustomView</string>
+    <string name="title_activity_absolute_layout_test">AbsoluteLayoutTest</string>
+    <string name="title_activity_frame_layout_test">FrameLayoutTest</string>
+    <string name="title_activity_grid_layout_test">GridLayoutTest</string>
+    <string name="title_activity_linear_layout_test">LinearLayoutTest</string>
+    <string name="title_activity_relative_layout_test">RelativeLayoutTest</string>
+    <string name="title_activity_table_layout_test">TableLayoutTest</string>
+    <string name="title_activity_button_test">ButtonTest</string>
+    <string name="title_activity_check_button_test">CheckButtonTest</string>
+    <string name="title_activity_chronometer">Chronometer</string>
+    <string name="title_activity_clock_test">ClockTest</string>
+    <string name="title_activity_input_uitest">InputUITest</string>
+    <string name="title_activity_nine_patch_test">NinePatchTest</string>
+    <string name="title_activity_text_view_test">TextViewTest</string>
+    <string name="title_activity_toggle_button_test">ToggleButtonTest</string>
+    <string name="title_activity_image_button_test">ImageButtonTest</string>
+    <string name="title_activity_image_view_test">ImageViewTest</string>
+    <string name="title_activity_quick_contact_badge_test">QuickContactBadgeTest</string>
+    <string name="title_activity_adapter_view_flipper_test">AdapterViewFlipperTest</string>
+    <string name="title_activity_array_adapter_test">ArrayAdapterTest</string>
+    <string name="title_activity_auto_complete_text_view_test">AutoCompleteTextViewTest</string>
+    <string name="title_activity_base_adapter_test">BaseAdapterTest</string>
+    <string name="title_activity_expandable_list_view_test">ExpandableListViewTest</string>
+    <string name="title_activity_gallary_test">GallaryTest</string>
+    <string name="title_activity_grid_view_test">GridViewTest</string>
+    <string name="title_activity_simple_adapter_test">SimpleAdapterTest</string>
+</resources>

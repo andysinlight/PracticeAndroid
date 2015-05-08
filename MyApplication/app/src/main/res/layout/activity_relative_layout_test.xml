@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/reRoot"
+    tools:context="yuan.andy.test.ui.RelativeLayoutTest">
+
+  <TextView
+      android:id="@+id/textVieCenter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/title_activity_ui"
+      android:textSize="40dp"
+      android:background="#FF00"
+      android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/textViewBttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_ui"
+        android:textSize="40dp"
+        android:background="#FFf0"
+        android:layout_below="@id/textVieCenter"
+        android:layout_alignRight="@id/textVieCenter"/>
+
+    <TextView
+        android:id="@+id/textVieupper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_ui"
+        android:textSize="40dp"
+        android:background="#FFf0"
+        android:layout_above="@id/textVieCenter"
+        android:layout_alignRight="@id/textVieCenter"/>
+
+    <TextView
+        android:id="@+id/textViewRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_ui"
+        android:textSize="40dp"
+        android:background="#FFf0"
+        android:layout_toRightOf="@id/textVieCenter"
+       android:layout_alignBaseline="@id/textVieCenter"/>
+
+    <TextView
+        android:id="@+id/textViewLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_ui"
+        android:textSize="40dp"
+        android:background="#FFf0"
+        android:layout_toLeftOf="@id/textVieCenter"
+        android:layout_alignBaseline="@id/textVieCenter"/>
+
+</RelativeLayout>

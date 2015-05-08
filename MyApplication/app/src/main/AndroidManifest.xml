@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yuan.andy.test" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LaunchActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI"
+            android:label="@string/title_activity_ui" >
+        </activity>
+        <activity
+            android:name=".ui.CodeView"
+            android:label="@string/title_activity_code_view" >
+            <intent-filter>
+                <action android:name="andy.launchcodeview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CustomView"
+            android:label="@string/title_activity_custom_view" >
+            <intent-filter>
+                <action android:name="andy.launchcustomview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MixView"
+            android:label="MixView" >
+            <intent-filter>
+                <action android:name="andy.launchcumixview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AbsoluteLayoutTest"
+            android:label="@string/title_activity_absolute_layout_test" >
+            <intent-filter>
+                <action android:name="andy.launchabsolutelayout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.FrameLayoutTest"
+            android:label="@string/title_activity_frame_layout_test" >
+            <intent-filter>
+                <action android:name="andy.launchframe" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GridLayoutTest"
+            android:label="@string/title_activity_grid_layout_test" >
+            <intent-filter>
+                <action android:name="andy.gridlayout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LinearLayoutTest"
+            android:label="@string/title_activity_linear_layout_test" >
+            <intent-filter>
+                <action android:name="andy.linearlayout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.RelativeLayoutTest"
+            android:label="@string/title_activity_relative_layout_test" >
+            <intent-filter>
+                <action android:name="andy.relativelayout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TableLayoutTest"
+            android:label="@string/title_activity_table_layout_test" >
+            <intent-filter>
+                <action android:name="andy.tablelayout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 第三节 -->
+        <activity
+            android:name=".ui.ButtonTest"
+            android:label="@string/title_activity_button_test" >
+            <intent-filter>
+                <action android:name="andy.buttontest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CheckButtonTest"
+            android:label="@string/title_activity_check_button_test" >
+            <intent-filter>
+                <action android:name="andy.checkbutton" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ChronometerTest"
+            android:label="@string/title_activity_chronometer" >
+            <intent-filter>
+                <action android:name="andy.chronometer" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ClockTest"
+            android:label="@string/title_activity_clock_test" >
+            <intent-filter>
+                <action android:name="andy.clocktest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.InputUITest"
+            android:label="@string/title_activity_input_uitest" >
+            <intent-filter>
+                <action android:name="andy.input" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.NinePatchTest"
+            android:label="@string/title_activity_nine_patch_test" >
+            <intent-filter>
+                <action android:name="andy.ninepath" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TextViewTest"
+            android:label="@string/title_activity_text_view_test" >
+            <intent-filter>
+                <action android:name="andy.textview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ToggleButtonTest"
+            android:label="@string/title_activity_toggle_button_test" >
+            <intent-filter>
+                <action android:name="andy.ToggleButtonTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ImageButtonTest"
+            android:label="@string/title_activity_image_button_test" >
+            <intent-filter>
+                <action android:name="andy.ImageButton" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ImageViewTest"
+            android:label="@string/title_activity_image_view_test" >
+            <intent-filter>
+                <action android:name="andy.ImageViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.QuickContactBadgeTest"
+            android:label="@string/title_activity_quick_contact_badge_test" >
+            <intent-filter>
+                <action android:name="andy.QuickContactBadgeTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 第五节 -->
+        <activity
+            android:name=".ui.AdapterViewFlipperTest"
+            android:label="@string/title_activity_adapter_view_flipper_test" >
+            <intent-filter>
+                <action android:name="andy.AdapterViewFlipperTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ArrayAdapterTest"
+            android:label="@string/title_activity_array_adapter_test" >
+            <intent-filter>
+                <action android:name="andy.ArrayAdapterTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AutoCompleteTextViewTest"
+            android:label="@string/title_activity_auto_complete_text_view_test" >
+            <intent-filter>
+                <action android:name="andy.AutoCompleteTextViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.BaseAdapterTest"
+            android:label="@string/title_activity_base_adapter_test" >
+            <intent-filter>
+                <action android:name="andy.BaseAdapterTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ExpandableListViewTest"
+            android:label="@string/title_activity_expandable_list_view_test" >
+            <intent-filter>
+                <action android:name="andy.ExpandableListViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GallaryTest"
+            android:label="@string/title_activity_gallary_test" >
+            <intent-filter>
+                <action android:name="andy.GallaryTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GridViewTest"
+            android:label="@string/title_activity_grid_view_test" >
+            <intent-filter>
+                <action android:name="andy.GridViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SimpleAdapterTest"
+            android:label="@string/title_activity_simple_adapter_test" >
+        </activity>
+    </application>
+
+</manifest>

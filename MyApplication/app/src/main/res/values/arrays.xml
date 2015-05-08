@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="chapter2">
+        <item>第一节</item>
+        <item>第二节</item>
+        <item>第三节</item>
+        <item>第四节</item>
+        <item>第五节</item>
+        <item>第六节</item>
+        <item>第七节</item>
+        <item>第八节</item>
+        <item>第九节</item>
+    </array>
+
+    <array name="child2_1">
+        <item>"CodeView"</item>
+        <item>"CustomView"</item>
+        <item>"MixView"</item>
+    </array>
+
+    <array name="child2_2">
+        <item>"AbsoluteLayoutTest"</item>
+        <item>"FrameLayoutTest"</item>
+        <item>"GridLayoutTest"</item>
+        <item>"LinearLayoutTest"</item>
+        <item>"RelativeLayoutTest"</item>
+        <item>TableLayoutTest</item>
+    </array>
+
+    <array name="child2_3">
+        <item>"ButtonTest"</item>
+        <item>"CheckButtonTest"</item>
+        <item>"ChronometerTest"</item>
+        <item>"ClockTest"</item>
+        <item>"InputUI"</item>
+        <item>"NinePatchTest"</item>
+        <item>"TextViewTest"</item>
+        <item>"TestViewTest2"</item>
+        <item>"ToggleButtonTest"</item>
+    </array>
+
+    <array name="child2_4">
+        <item>"ImageButtonTest"</item>
+        <item>"ImageViewTest"</item>
+        <item>"QuickContactBadgeTest"</item>
+    </array>
+
+    <array name="child2_5">
+        <item>"AdapterViewFlipperTest"</item>
+        <item>"ArrayAdapterTest"</item>
+        <item>"AutoCompleteTextViewTest"</item>
+        <item>"BaseAdapter"</item>
+        <item>ExpandableListViewTest</item>
+        <item>GallaryTest</item>
+        <item>GridVeiwTest</item>
+        <item>ListActivityTest</item>
+        <item>SimpleAdapterTest</item>
+        <item>SimpleListViewTest</item>
+        <item>SpinnerTest</item>
+        <item>StackViewTest</item>
+    </array>
+
+    <array name="child2_6">
+        <item>"ProgressBarTest"</item>
+        <item>"RatingBarTest"</item>
+        <item>"WeekBarTest"</item>
+        <item>"TitleProgressBar"</item>
+    </array>
+
+    <array name="child2_7">
+        <item>"ImageSwitchTest"</item>
+        <item>"TextSwitchTest"</item>
+        <item>"ViewFlipperTest"</item>
+        <item>"ViewSwitchTest"</item>
+    </array>
+
+    <array name="child2_8">
+        <item>"CalendarViewTest"</item>
+        <item>"ChooseDate"</item>
+        <item>"NotificationTest"</item>
+        <item>"NumberPickerTest"</item>
+        <item>"ScrollViewTest"</item>
+        <item>"SearchViewTest"</item>
+        <item>"TabHostTest"</item>
+        <item>"ToastTest"</item>
+    </array>
+
+    <array name="child2_9">
+        <item>"AlertDialogTest"</item>
+        <item>"DateDialogTest"</item>
+        <item>"DialogThem"</item>
+        <item>"PopupWindowTest"</item>
+        <item>"ProggressDialogTest"</item>
+    </array>
+
+
+
+</resources>
