@@ -10,5 +10,5 @@ public interface GameService {
     abstract  boolean hasPiece() ;
     abstract Piece findPiece(Point point) ;
     abstract Piece [][] getPieces();
-    abstract LinkInfo  link() ;
+    abstract LinkInfo  link(Piece p1,Piece p2) ;
 }

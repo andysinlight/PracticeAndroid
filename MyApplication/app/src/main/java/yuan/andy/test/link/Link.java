@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import yuan.andy.test.R;
 import yuan.andy.test.link.impl.GameServiceImpl;
 import yuan.andy.test.link.obj.GameConfig;
+import yuan.andy.test.link.obj.LinkInfo;
 import yuan.andy.test.link.view.GameView;
 import yuan.andy.test.link.view.Piece;
 
@@ -20,6 +21,7 @@ public class Link extends Activity {
     GameConfig config ;
     GameService service;
     GameView gameView ;
+    Piece seleced ;
 
 
     @Override
@@ -35,12 +37,11 @@ public class Link extends Activity {
         gameView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-               if(event.getAction()==MotionEvent.ACTION_DOWN){
-                   handDown(event);
-               }
-               else if(event.getAction()==MotionEvent.ACTION_UP){
-                   handUp();
-               }
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    handDown(event);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    handUp();
+                }
                 return false;
             }
         });
@@ -57,13 +58,40 @@ public class Link extends Activity {
     }
 
     public void handDown(MotionEvent event){
-        Piece p =this.service.findPiece(new Point((int)event.getX(),(int)event.getY()));
-       if(p!=null)
-           Log.i("andy>>>hadfind",""+p.getIndexX()+p.getIndexY());
+        Piece current =this.service.findPiece(new Point((int)event.getX(),(int)event.getY()));
+       if(current!=null)
+           Log.i("andy>>>hadfind",""+current.getIndexX()+current.getIndexY());
+        if(gameView.getSeleced()==null){
+            gameView.setSeleced(current);
+        }
+        if(seleced == null){
+            this.seleced = current;
+            gameView.postInvalidate();
+            return;
+        }
+
+        if(seleced!=null){
+            LinkInfo info = service.link(current, seleced);
+           if(info!=null){
+               handSuccess(info);
+               return;
+           }
+            gameView.setSeleced(current);
+            seleced =current ;
+            gameView.postInvalidate();
+            return;
+        }
     }
 
     public void  handUp(){
 
+    }
+
+    public void handSuccess(LinkInfo info){
+        gameView.setLinkInfo(info);
+        gameView.postInvalidate();
+        gameView.setSeleced(null);
+        this.seleced=null ;
     }
 
 

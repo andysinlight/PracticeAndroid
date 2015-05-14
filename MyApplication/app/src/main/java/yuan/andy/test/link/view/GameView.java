@@ -10,6 +10,7 @@ import android.view.View;
 
 import yuan.andy.test.link.GameService;
 import yuan.andy.test.link.obj.LinkInfo;
+import yuan.andy.test.link.util.ImageUtil;
 
 /**
  * TODO: document your custom view class.
@@ -17,7 +18,7 @@ import yuan.andy.test.link.obj.LinkInfo;
 public class GameView extends View {
     private GameService service ;
     private LinkInfo linkInfo ;
-    private Piece seleced ;
+    private Piece seleced =null ;
     private Bitmap selecedImage ;
     private  Piece [][] pieces ;
     private Paint paint = new Paint();
@@ -25,6 +26,7 @@ public class GameView extends View {
 
     public GameView(Context context,AttributeSet arr) {
         super(context,arr);
+        selecedImage = ImageUtil.getSeleced(context);
     }
 
     @Override
@@ -50,6 +52,11 @@ public class GameView extends View {
                 e.printStackTrace();
             }
         }
+
+
+        if(seleced !=null){
+            canvas.drawBitmap(selecedImage,seleced.getStartX(),seleced.getStarrY(),paint);
+        }
     }
 
     public void setService(GameService service) {
@@ -63,5 +70,13 @@ public class GameView extends View {
     public void start(){
         service.start();
         postInvalidate();
+    }
+
+    public Piece getSeleced() {
+        return seleced;
+    }
+
+    public void setLinkInfo(LinkInfo linkInfo) {
+        this.linkInfo = linkInfo;
     }
 }

@@ -64,7 +64,8 @@ public class GameServiceImpl implements GameService {
 
 
     @Override
-    public LinkInfo link() {
+    public LinkInfo link(Piece p1,Piece p2) {
+
         return null;
     }
 }

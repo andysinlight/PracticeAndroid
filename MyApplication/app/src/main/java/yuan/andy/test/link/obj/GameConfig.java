@@ -2,9 +2,7 @@ package yuan.andy.test.link.obj;
 
 import android.content.Context;
 
-/**
- * Created by Administrator on 2015-5-14.
- */
+
 public class GameConfig {
     Context cont ;
     int beginX ;
