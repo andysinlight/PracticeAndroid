@@ -269,6 +269,225 @@
         <activity
             android:name=".ui.SimpleAdapterTest"
             android:label="@string/title_activity_simple_adapter_test" >
+            <intent-filter>
+                <action android:name="andy.SimpleAdapterTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SimpleListViewTest"
+            android:label="@string/title_activity_simple_list_view_test" >
+            <intent-filter>
+                <action android:name="andy.SimpleListViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SpinnerTest"
+            android:label="@string/title_activity_spinner" >
+            <intent-filter>
+                <action android:name="andy.SpinnerTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StackViewTest"
+            android:label="@string/title_activity_stack_view_test" >
+            <intent-filter>
+                <action android:name="andy.StackViewTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 第六节 -->
+        <activity
+            android:name=".ui.ProgressBarTest"
+            android:label="@string/title_activity_progress_bar_test" >
+            <intent-filter>
+                <action android:name="andy.ProgressBarTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.RatingBarTest"
+            android:label="@string/title_activity_rating_bar_test" >
+            <intent-filter>
+                <action android:name="andy.RatingBarTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TitleProgressBar"
+            android:label="@string/title_activity_title_progress_bar" >
+            <intent-filter>
+                <action android:name="andy.TitleProgressBar" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ImageSwitcherTest"
+            android:label="@string/title_activity_image_switcher_test" >
+            <intent-filter>
+                <action android:name="andy.ImageSwitcherTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TextSwitcherTest"
+            android:label="@string/title_activity_text_switcher_test" >
+            <intent-filter>
+                <action android:name="andy.TextSwitcherTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ViewFlipperTest"
+            android:label="@string/title_activity_view_flipper_test" >
+            <intent-filter>
+                <action android:name="andy.ViewFlipperTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ViewSwitcherTest"
+            android:label="@string/title_activity_view_switcher_test" >
+            <intent-filter>
+                <action android:name="andy.ViewSwitcherTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TabHostTest"
+            android:label="@string/title_activity_tab_host_test" >
+            <intent-filter>
+                <action android:name="andy.TabHostTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.NotificationTest"
+            android:label="@string/title_activity_notification_test" >
+            <intent-filter>
+                <action android:name="andy.NotificationTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AlertDialogTest"
+            android:label="@string/title_activity_alert_dialog_test" >
+            <intent-filter>
+                <action android:name="andy.AlertDialogTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DateDialogTest"
+            android:label="@string/title_activity_date_dialog_test" >
+            <intent-filter>
+                <action android:name="andy.DateDialogTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DialogTheme"
+            android:label="@string/title_activity_dialog_theme"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
+            <intent-filter>
+                <action android:name="andy.DialogTheme" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PopupWindowTest"
+            android:label="@string/title_activity_popup_window_test" >
+            <intent-filter>
+                <action android:name="andy.PopupWindowTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ProgressDialogTest"
+            android:label="@string/title_activity_progress_dialog_test" >
+            <intent-filter>
+                <action android:name="andy.ProgressDialogTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ActivityMenu"
+            android:label="@string/title_activity_activity_menu" >
+            <intent-filter>
+                <action android:name="andy.ActivityMenu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MenuTest"
+            android:label="@string/title_activity_menu_test" >
+            <intent-filter>
+                <action android:name="andy.MenuTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ContextMenuTest"
+            android:label="@string/title_activity_context_menu_test" >
+            <intent-filter>
+                <action android:name="andy.ContextMenuTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MenuResTest"
+            android:label="@string/title_activity_menu_res_test" >
+            <intent-filter>
+                <action android:name="andy.MenuResTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PopupMenuTest"
+            android:label="@string/title_activity_popup_menu_test" >
+            <intent-filter>
+                <action android:name="andy.PopupMenuTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ActionBarTest"
+            android:label="@string/title_activity_action_bar_test" >
+            <intent-filter>
+                <action android:name="andy.ActionBarTest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".link.Link"
+            android:label="@string/title_activity_link" >
         </activity>
     </application>
 

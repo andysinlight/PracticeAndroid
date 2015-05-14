@@ -1,14 +1,13 @@
 package yuan.andy.test;
 
 import android.app.ListActivity;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import yuan.andy.test.ui.CodeView;
+import yuan.andy.test.link.Link;
 
 
 public class LaunchActivity extends ListActivity {
@@ -30,6 +29,10 @@ public class LaunchActivity extends ListActivity {
             case 0:
                 startActivity(new Intent(LaunchActivity.this,UI.class));
                 break;
+
+            case 4 :
+                startActivity(new Intent(LaunchActivity.this, Link.class));
+                break ;
         }
     }
 }

@@ -9,6 +9,7 @@
         <item>Android事件</item>
         <item>Activity与Fragment</item>
         <item>Intent and Intentfilter</item>
+        <item>连连看</item>
     </array>
 
     <string name="title_activity_ui">UI</string>
@@ -39,4 +40,32 @@
     <string name="title_activity_gallary_test">GallaryTest</string>
     <string name="title_activity_grid_view_test">GridViewTest</string>
     <string name="title_activity_simple_adapter_test">SimpleAdapterTest</string>
+    <string name="title_activity_simple_list_view_test">SimpleListViewTest</string>
+    <string name="title_activity_spinner">Spinner</string>
+    <string name="title_activity_stack_view_test">StackViewTest</string>
+    <string name="title_activity_progress_bar_test">ProgressBarTest</string>
+    <string name="title_activity_rating_bar_test">RatingBarTest</string>
+    <string name="title_activity_title_progress_bar">TitleProgressBar</string>
+    <string name="title_activity_image_switcher_test">ImageSwitcherTest</string>
+    <string name="title_activity_text_switcher_test">TextSwitcherTest</string>
+    <string name="title_activity_view_flipper_test">ViewFlipperTest</string>
+    <string name="title_activity_view_switcher_test">ViewSwitcherTest</string>
+    <string name="title_activity_tab_host_test">TabHostTest</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_notification_test">NotificationTest</string>
+    <string name="title_activity_alert_dialog_test">AlertDialogTest</string>
+    <string name="title_activity_date_dialog_test">DateDialogTest</string>
+    <string name="title_activity_dialog_theme">DialogTheme</string>
+    <string name="title_activity_popup_window_test">PopupWindowTest</string>
+    <string name="title_activity_progress_dialog_test">ProgressDialogTest</string>
+    <string name="title_activity_activity_menu">ActivityMenu</string>
+    <string name="title_activity_menu_test">MenuTest</string>
+    <string name="title_activity_context_menu_test">ContextMenuTest</string>
+    <string name="title_activity_menu_res_test">MenuResTest</string>
+    <string name="title_activity_popup_menu_test">PopupMenuTest</string>
+    <string name="title_activity_action_bar_test">ActionBarTest</string>
+    <string name="title_activity_link">Link</string>
 </resources>

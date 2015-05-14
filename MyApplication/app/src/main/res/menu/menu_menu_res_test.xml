@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="yuan.andy.test.ui.MenuResTest">
+    <item
+        android:id="@+id/fort_size"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/fort_10"
+                    android:title="fort_10"/>
+                <item android:id="@+id/fort_18"
+                    android:title="fort_18"/>
+                <item
+                    android:id="@+id/fort_20"
+                    android:title="fort_20"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/norm"
+        android:title="普通选项"/>
+
+    <item android:id="@+id/fort_color"
+        android:title="fort_coolor">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/fort_green"
+                    android:title="fort_green"/>
+                <item android:id="@+id/fort_red"
+                    android:title="fort_RED"/>
+            </group>
+        </menu>
+    </item>
+</menu>

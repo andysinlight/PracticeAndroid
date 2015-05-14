@@ -4,7 +4,12 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/image1"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <Button
+        android:id="@+id/cancle"
+        android:text="取消"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

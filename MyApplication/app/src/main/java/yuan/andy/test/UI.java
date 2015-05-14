@@ -3,8 +3,6 @@ package yuan.andy.test;
 
 import android.app.ExpandableListActivity;
 import android.content.Intent;
-import android.drm.DrmStore;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +11,6 @@ import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import yuan.andy.test.ui.*;
 
 
 
@@ -38,9 +34,13 @@ public class UI extends ExpandableListActivity {
         String [] item7 = getResources().getStringArray(R.array.child2_7);
         String [] item8 = getResources().getStringArray(R.array.child2_8);
         String [] item9 = getResources().getStringArray(R.array.child2_9);
+        String [] item10 = getResources().getStringArray(R.array.child2_10);
+        String [] item11 = getResources().getStringArray(R.array.child2_11);
+
 
         items =new String[][] {
                 item1,item2,   item3,item4,   item5,item6,   item7,item8,   item9
+                ,item10,item11
         };
 
         BaseExpandableListAdapter adapter = new BaseExpandableListAdapter() {
@@ -263,8 +263,144 @@ public class UI extends ExpandableListActivity {
                                 intent.setAction("andy.GridViewTest");
                                 startActivity(intent);
                                 break;
+                            case 8 :
+                                intent.setAction("andy.SimpleAdapterTest");
+                                startActivity(intent);
+                                break;
+                            case 9 :
+                                intent.setAction("andy.SimpleListViewTest");
+                                startActivity(intent);
+                                break;
+                            case 10 :
+                                intent.setAction("andy.SpinnerTest");
+                                startActivity(intent);
+                                break;
+
+                            case 11 :
+                                intent.setAction("andy.StackViewTest");
+                                startActivity(intent);
+                                break;
                         }
                         break;
+
+//                    第六节
+                    case 5:
+                        switch (childPosition){
+                            case 0:
+                                intent.setAction("andy.ProgressBarTest");
+                                startActivity(intent);
+                                break;
+                            case 1:
+                                intent.setAction("andy.RatingBarTest");
+                                startActivity(intent);
+                                break;
+
+                            case 3:
+                                intent.setAction("andy.TitleProgressBar");
+                                startActivity(intent);
+                                break;
+
+                        }
+                        break;
+//                    第七节
+                    case 6:
+                        switch (childPosition){
+                            case 0:
+                                intent.setAction("andy.ImageSwitcherTest");
+                                startActivity(intent);
+                                break ;
+                            case 1:
+                                intent.setAction("andy.TextSwitcherTest");
+                                startActivity(intent);
+                                break ;
+                            case 2:
+                                intent.setAction("andy.ViewFlipperTest");
+                                startActivity(intent);
+                                break ;
+
+                            case 3:
+                                intent.setAction("andy.ViewSwitcherTest");
+                                startActivity(intent);
+                                break ;
+                        }
+                        break;
+
+                    case 7:
+                        switch (childPosition){
+                            case 6:
+                                intent.setAction("andy.TabHostTest");
+                                startActivity(intent);
+                                break;
+
+                            case 2:
+                                intent.setAction("andy.NotificationTest");
+                                startActivity(intent);
+                                break;
+                        }
+                        break;
+//                    第九节
+                    case 8:
+                        switch(childPosition){
+                            case 0:
+                                intent.setAction("andy.AlertDialogTest");
+                                startActivity(intent);
+                                break ;
+                            case 1:
+                                intent.setAction("andy.DateDialogTest");
+                                startActivity(intent);
+                                break ;
+                            case 2:
+                                intent.setAction("andy.DialogTheme");
+                                startActivity(intent);
+                                break ;
+                            case 3:
+                                intent.setAction("andy.PopupWindowTest");
+                                startActivity(intent);
+                                break ;
+                            case 4:
+                                intent.setAction("andy.ProgressDialogTest");
+                                startActivity(intent);
+                                break ;
+                        }
+                        break ;
+//                    第十节
+                    case 9 :
+                        switch (childPosition){
+                            case 0:
+                                intent.setAction("andy.ActivityMenu");
+                                startActivity(intent);
+                                break;
+
+                            case 2:
+                                intent.setAction("andy.MenuTest");
+                                startActivity(intent);
+                                break;
+                            case 1:
+                                intent.setAction("andy.ContextMenuTest");
+                                startActivity(intent);
+                                break;
+
+                            case 3:
+                                intent.setAction("andy.MenuResTest");
+                                startActivity(intent);
+                                break;
+
+                            case 4:
+                                intent.setAction("andy.PopupMenuTest");
+                                startActivity(intent);
+                                break;
+                        }
+                        break;
+
+                    case 10:
+                        switch (childPosition){
+                            case 0:
+                                intent.setAction("andy.ActionBarTest");
+                                startActivity(intent);
+                                break;
+                        }
+                        break;
+
                 }
                 return false;
             }
