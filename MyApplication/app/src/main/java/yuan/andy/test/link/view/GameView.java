@@ -29,9 +29,9 @@ public class GameView extends View {
 
 
     public GameView(Context context,AttributeSet arr) {
-        super(context,arr);
+        super(context, arr);
         selecedImage = ImageUtil.getSeleced(context);
-        paint.setColor(Color.YELLOW);
+        paint.setColor(Color.RED);
         paint.setStrokeWidth(7);
     }
 
@@ -45,8 +45,8 @@ public class GameView extends View {
                 for (int i = 0; i < pieces.length; i++) {
                     for (int j = 0; j < pieces[i].length; j++) {
                         Log.i("andy_game_view_i,j","i>> "+i +"j>> "+j);
-                        if(pieces[i][j]!=null);
-                        {   Piece p = pieces[i][j];
+                        if (pieces[i][j]!=null) {
+                            Piece p = pieces[i][j];
                             PieceImage pieceImage = p.getImage();
                             Bitmap bitmap = pieceImage.getBitmap();
                             canvas.drawBitmap(bitmap, p.getStartX(), p.getStarrY(), paint);

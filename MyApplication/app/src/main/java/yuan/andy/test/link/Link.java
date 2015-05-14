@@ -72,9 +72,9 @@ public class Link extends Activity {
 
         if(seleced!=null){
             LinkInfo info = service.link(current, seleced);
-            handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
+//            handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
            if(info!=null){
-               handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
+               handSuccess(info,current,seleced);
                return ;
            }
             gameView.setSeleced(current);
@@ -88,11 +88,15 @@ public class Link extends Activity {
 
     }
 
-    public void handSuccess(LinkInfo info){
+    public void handSuccess(LinkInfo info,Piece p1,Piece p2){
         gameView.setLinkInfo(info);
         gameView.postInvalidate();
         gameView.setSeleced(null);
         this.seleced=null ;
+        Piece [][] pieces =service.getPieces();
+        pieces[p1.getIndexX()][p1.getIndexY()]=null;
+        pieces[p2.getIndexX()][p2.getIndexY()]=null;
+        gameView.postInvalidate();
     }
 
 

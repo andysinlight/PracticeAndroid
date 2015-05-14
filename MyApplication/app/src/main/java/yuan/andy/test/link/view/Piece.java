@@ -32,7 +32,7 @@ public class Piece {
         if(piece==null){
             return false ;
         }
-        return this.getImage().equals(piece.getImage());
+        return this.getImage().getImageid()==(piece.getImage()).getImageid();
     }
 
     public PieceImage getImage() {
