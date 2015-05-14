@@ -12,8 +12,8 @@ public class GameConfig {
     int countX ;
     int countY ;
     int DEFAULT_TIME ;
-    int DEFAULT_WIDTH =60;
-    int DEFAULT_HEIGH =60;
+    int DEFAULT_WIDTH =80;
+    int DEFAULT_HEIGH =80;
 
     public GameConfig(Context cont, int beginX, int beginy, int countX, int countY,int time) {
         this.cont = cont;

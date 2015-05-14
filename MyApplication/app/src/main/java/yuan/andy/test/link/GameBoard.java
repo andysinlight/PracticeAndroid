@@ -1,4 +1,4 @@
-package yuan.andy.test;
+package yuan.andy.test.link;
 
 import android.util.Log;
 

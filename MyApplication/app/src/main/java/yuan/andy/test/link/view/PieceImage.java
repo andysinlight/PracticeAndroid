@@ -8,6 +8,7 @@ public class PieceImage {
     int imageid ;
 
     public PieceImage(Bitmap image, int imageid) {
+
         this.bitmap = image;
         this.imageid = imageid;
     }

@@ -5,7 +5,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import yuan.andy.test.GameBoard;
+import yuan.andy.test.link.GameBoard;
 import yuan.andy.test.link.obj.GameConfig;
 import yuan.andy.test.link.view.Piece;
 

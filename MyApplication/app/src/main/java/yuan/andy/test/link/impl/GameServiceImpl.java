@@ -1,7 +1,9 @@
 package yuan.andy.test.link.impl;
 
-import yuan.andy.test.GameBoard;
-import yuan.andy.test.GameService;
+import android.graphics.Point;
+
+import yuan.andy.test.link.GameBoard;
+import yuan.andy.test.link.GameService;
 import yuan.andy.test.link.obj.GameConfig;
 import yuan.andy.test.link.obj.LinkInfo;
 import yuan.andy.test.link.view.Piece;
@@ -34,8 +36,29 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public Piece findPiece() {
-        return null;
+    public Piece findPiece(Point point) {
+        int indexX,indexY ;
+        int relativeX = point.x-config.getBeginX();
+        int relativeY = point.y-config.getBeginy();
+        if(relativeX<0||relativeY<0){
+            return  null ;
+        }
+        if(relativeX % config.getDEFAULT_WIDTH()==0){
+            indexX = relativeX/config.getDEFAULT_WIDTH()-1;
+        }else {
+            indexX=relativeX/config.getDEFAULT_WIDTH();
+        }
+
+        if(relativeY % config.getDEFAULT_HEIGH()==0){
+            indexY = relativeY/config.getDEFAULT_HEIGH()-1;
+        }else {
+            indexY=relativeY/config.getDEFAULT_HEIGH();
+        }
+
+        if(0<=indexX && indexX <config.getCountY() && indexY>=0&&indexY<config.getCountX()){
+        return pieces[indexY][indexX];
+        }
+        return null ;
     }
 
 
