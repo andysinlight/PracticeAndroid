@@ -72,9 +72,10 @@ public class Link extends Activity {
 
         if(seleced!=null){
             LinkInfo info = service.link(current, seleced);
+            handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
            if(info!=null){
-               handSuccess(info);
-               return;
+               handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
+               return ;
            }
             gameView.setSeleced(current);
             seleced =current ;

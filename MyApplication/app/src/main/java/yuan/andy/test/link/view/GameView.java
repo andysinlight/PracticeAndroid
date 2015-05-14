@@ -3,10 +3,14 @@ package yuan.andy.test.link.view;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+
+import java.util.ArrayList;
 
 import yuan.andy.test.link.GameService;
 import yuan.andy.test.link.obj.LinkInfo;
@@ -27,6 +31,8 @@ public class GameView extends View {
     public GameView(Context context,AttributeSet arr) {
         super(context,arr);
         selecedImage = ImageUtil.getSeleced(context);
+        paint.setColor(Color.YELLOW);
+        paint.setStrokeWidth(7);
     }
 
     @Override
@@ -56,6 +62,21 @@ public class GameView extends View {
 
         if(seleced !=null){
             canvas.drawBitmap(selecedImage,seleced.getStartX(),seleced.getStarrY(),paint);
+        }
+
+        if(linkInfo !=null){
+            drawLine(this.linkInfo,canvas);
+            Log.i("andy_drawling","drawling");
+        }
+    }
+
+    public void  drawLine(LinkInfo linkInfo,Canvas canvas){
+        ArrayList<Point> points  =(ArrayList)linkInfo.getPoints();
+        for(int i=0;i<points.size()-1;i++){
+            Point currentPoint = points.get(i);
+            Point secondPoint = points.get(i+1);
+            Log.i("andy_drawline>>>>"," "+currentPoint.x +currentPoint.y+secondPoint.x+secondPoint.y);
+            canvas.drawLine(currentPoint.x,currentPoint.y,secondPoint.x,secondPoint.y,paint);
         }
     }
 

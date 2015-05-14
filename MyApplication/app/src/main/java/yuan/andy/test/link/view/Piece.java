@@ -23,8 +23,8 @@ public class Piece {
     }
 
     public Point getPieceCenter(){
-        return new Point(startX+getImage().getBitmap().getWidth(),
-                starrY+getImage().getBitmap().getHeight());
+        return new Point(startX+getImage().getBitmap().getWidth()/2,
+                starrY+getImage().getBitmap().getHeight()/2);
     }
 
 

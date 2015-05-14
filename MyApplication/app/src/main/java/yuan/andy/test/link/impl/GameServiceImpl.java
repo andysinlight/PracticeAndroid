@@ -8,9 +8,7 @@ import yuan.andy.test.link.obj.GameConfig;
 import yuan.andy.test.link.obj.LinkInfo;
 import yuan.andy.test.link.view.Piece;
 
-/**
- * Created by Administrator on 2015-5-14.
- */
+
 public class GameServiceImpl implements GameService {
     private GameConfig config ;
     private Piece [][] pieces ;

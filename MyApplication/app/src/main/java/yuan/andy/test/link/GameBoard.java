@@ -10,9 +10,7 @@ import yuan.andy.test.link.util.ImageUtil;
 import yuan.andy.test.link.view.Piece;
 import yuan.andy.test.link.view.PieceImage;
 
-/**
- * Created by Administrator on 2015-5-14.
- */
+
 public abstract class GameBoard {
 
     GameConfig config;
