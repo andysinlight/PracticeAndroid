@@ -75,9 +75,9 @@ public class GameServiceImpl implements GameService {
         if(p1.getIndexY()==p2.getIndexY()){
             if(p1.getIndexX()>p2.getIndexX()){
                 Log.i("andy_blockx", "p1>>>p2");
-                link(p2, p1);
-                Log.i("andy_blockx", "second link done");
-                return null;
+                return link(p2, p1);
+                //Log.i("andy_blockx", "second link done");
+              // return null;
             }
             if(isBlockX(p1, p2)) {
                 Log.i("andy_blockx", "bloclkx");
@@ -89,9 +89,9 @@ public class GameServiceImpl implements GameService {
         if(p1.getIndexX()==p2.getIndexX()){
             if(p1.getIndexY()>p2.getIndexY()){
                 Log.i("andy_blockx", "p1>>>p2");
-                link(p2, p1);
-                Log.i("andy_blockx", "Ysecond link done");
-                return null;
+                return link(p2, p1);
+               // Log.i("andy_blockx", "Ysecond link done");
+             //   return null;
             }
             if(isBlockY(p1, p2)) {
                 Log.i("andy_blockx", "bloclkY");
