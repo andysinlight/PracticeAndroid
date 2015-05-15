@@ -27,7 +27,7 @@ public class GameBoard_1 extends GameBoard {
                 arrayList.add(p);
             }
         }
-        Log.i("andy____gameboard_1","Piece[ "+piece.length+"]"+" ["+piece[0].length+"]"+">>>>>>"+arrayList.size());
+//        Log.i("andy____gameboard_1","Piece[ "+piece.length+"]"+" ["+piece[0].length+"]"+">>>>>>"+arrayList.size());
         return arrayList;
     }
 

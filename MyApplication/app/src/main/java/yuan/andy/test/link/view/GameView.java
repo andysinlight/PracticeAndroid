@@ -39,12 +39,12 @@ public class GameView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         pieces = service.getPieces();
-        Log.i("andy_game_view_pieces","x>>> "+pieces.length+">>y"+pieces[pieces.length-1].length);
+//        Log.i("andy_game_view_pieces","x>>> "+pieces.length+">>y"+pieces[pieces.length-1].length);
         if(pieces !=null) {
             try {
                 for (int i = 0; i < pieces.length; i++) {
                     for (int j = 0; j < pieces[i].length; j++) {
-                        Log.i("andy_game_view_i,j","i>> "+i +"j>> "+j);
+//                        Log.i("andy_game_view_i,j","i>> "+i +"j>> "+j);
                         if (pieces[i][j]!=null) {
                             Piece p = pieces[i][j];
                             PieceImage pieceImage = p.getImage();
@@ -54,7 +54,7 @@ public class GameView extends View {
                     }
                 }
             }catch ( Exception e){
-                Log.e("andy___gameview",e.toString());
+//                Log.e("andy___gameview",e.toString());
                 e.printStackTrace();
             }
         }
@@ -66,7 +66,7 @@ public class GameView extends View {
 
         if(linkInfo !=null){
             drawLine(this.linkInfo,canvas);
-            Log.i("andy_drawling","drawling");
+//            Log.i("andy_drawling","drawling");
         }
     }
 
@@ -75,7 +75,7 @@ public class GameView extends View {
         for(int i=0;i<points.size()-1;i++){
             Point currentPoint = points.get(i);
             Point secondPoint = points.get(i+1);
-            Log.i("andy_drawline>>>>"," "+currentPoint.x +currentPoint.y+secondPoint.x+secondPoint.y);
+//            Log.i("andy_drawline>>>>"," "+currentPoint.x +currentPoint.y+secondPoint.x+secondPoint.y);
             canvas.drawLine(currentPoint.x,currentPoint.y,secondPoint.x,secondPoint.y,paint);
         }
     }

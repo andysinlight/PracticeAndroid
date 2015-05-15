@@ -30,11 +30,11 @@ public abstract class GameBoard {
             piece.setStartX(config.getDEFAULT_WIDTH() * piece.getIndexY() + config.getBeginX());
            try {
                pieces[piece.getIndexX()][piece.getIndexY()] = piece ;
-                Log.i("andy___getindX -Y"," "+ piece.getIndexX()+">>y "+piece.getIndexY() );
+//                Log.i("andy___getindX -Y"," "+ piece.getIndexX()+">>y "+piece.getIndexY() );
            }catch (ArrayIndexOutOfBoundsException e){
            }
         }
-        Log.i("andy_AgameBoard_pieces",""+pieces.length+" "+pieces[pieces.length-1].length);
+//        Log.i("andy_AgameBoard_pieces",""+pieces.length+" "+pieces[pieces.length-1].length);
         return pieces ;
     }
 }

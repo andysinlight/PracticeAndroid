@@ -60,7 +60,7 @@ public class Link extends Activity {
     public void handDown(MotionEvent event){
         Piece current =this.service.findPiece(new Point((int)event.getX(),(int)event.getY()));
        if(current!=null)
-           Log.i("andy>>>hadfind",""+current.getIndexX()+current.getIndexY());
+//           Log.i("andy>>>hadfind",""+current.getIndexX()+current.getIndexY());
         if(gameView.getSeleced()==null){
             gameView.setSeleced(current);
         }
@@ -71,7 +71,7 @@ public class Link extends Activity {
         }
 
         if(seleced!=null){
-            LinkInfo info = service.link(current, seleced);
+            LinkInfo info = service.link(seleced, current);
 //            handSuccess(new LinkInfo(seleced.getPieceCenter(),current.getPieceCenter()));
            if(info!=null){
                handSuccess(info,current,seleced);
