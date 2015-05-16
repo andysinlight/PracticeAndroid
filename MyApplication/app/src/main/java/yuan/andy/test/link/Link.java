@@ -1,7 +1,8 @@
 package yuan.andy.test.link;
 
 import android.app.Activity;
-import android.content.res.Configuration;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +25,7 @@ public class Link extends Activity {
     GameServiceImpl service;
     GameView gameView ;
     Piece seleced ;
-
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class Link extends Activity {
         config = new GameConfig(this,75,80,10,6,100);
         service = new GameServiceImpl(config);
         gameView.setService(service);
+        builder=new AlertDialog.Builder(this);
     }
 
     public void strar(int time){
@@ -65,11 +67,11 @@ public class Link extends Activity {
         Piece current =this.service.findPiece(new Point((int) event.getX(), (int) event.getY()));
 
         if(current!=null) {
-            ArrayList list1 = service.getChannelUP(current);
-            ArrayList list2 = service.getChannelDown(current);
-            ArrayList list3 = service.getChannelLeft(current);
-            ArrayList list4 = service.getChannelRight(current);
-            Log.i("andy", "up" + list1.size() + " down" + list2.size() + " left" + list3.size() + "right" + list4.size());
+//            ArrayList list1 = service.getChannelUP(current);
+//            ArrayList list2 = service.getChannelDown(current);
+//            ArrayList list3 = service.getChannelLeft(current);
+//            ArrayList list4 = service.getChannelRight(current);
+//            Log.i("andy", "up" + list1.size() + " down" + list2.size() + " left" + list3.size() + "right" + list4.size());
         }
 //           Log.i("andy>>>hadfind",""+current.getIndexX()+current.getIndexY());
         if(gameView.getSeleced()==null){
@@ -108,7 +110,19 @@ public class Link extends Activity {
         Piece [][] pieces =service.getPieces();
         pieces[p1.getIndexX()][p1.getIndexY()]=null;
         pieces[p2.getIndexX()][p2.getIndexY()]=null;
+        if(!service.hasPiece()){
+            showGameSuccess();
+        }
     }
 
-
+    public void showGameSuccess(){
+        builder.setPositiveButton("再来一局", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                gameView.start();
+            }
+        }).setIcon(R.drawable.ic_launcher).setMessage("哇！！！ You are god")
+                .create()
+                .show();
+    }
 }
