@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.ArrayList;
+
 import yuan.andy.test.R;
 import yuan.andy.test.link.impl.GameServiceImpl;
 import yuan.andy.test.link.obj.GameConfig;
@@ -19,7 +21,7 @@ import yuan.andy.test.link.view.Piece;
 
 public class Link extends Activity {
     GameConfig config ;
-    GameService service;
+    GameServiceImpl service;
     GameView gameView ;
     Piece seleced ;
 
@@ -39,10 +41,12 @@ public class Link extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     handDown(event);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    handUp();
                 }
-                return false;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    handUp();
+                    //           Log.i("andy","handup");
+                }
+                return true;
             }
         });
     }
@@ -58,8 +62,15 @@ public class Link extends Activity {
     }
 
     public void handDown(MotionEvent event){
-        Piece current =this.service.findPiece(new Point((int)event.getX(),(int)event.getY()));
-       if(current!=null)
+        Piece current =this.service.findPiece(new Point((int) event.getX(), (int) event.getY()));
+
+        if(current!=null) {
+            ArrayList list1 = service.getChannelUP(current);
+            ArrayList list2 = service.getChannelDown(current);
+            ArrayList list3 = service.getChannelLeft(current);
+            ArrayList list4 = service.getChannelRight(current);
+            Log.i("andy", "up" + list1.size() + " down" + list2.size() + " left" + list3.size() + "right" + list4.size());
+        }
 //           Log.i("andy>>>hadfind",""+current.getIndexX()+current.getIndexY());
         if(gameView.getSeleced()==null){
             gameView.setSeleced(current);
@@ -85,7 +96,8 @@ public class Link extends Activity {
     }
 
     public void  handUp(){
-
+        gameView.setLinkInfo(null);
+        gameView.postInvalidate();
     }
 
     public void handSuccess(LinkInfo info,Piece p1,Piece p2){
@@ -96,7 +108,6 @@ public class Link extends Activity {
         Piece [][] pieces =service.getPieces();
         pieces[p1.getIndexX()][p1.getIndexY()]=null;
         pieces[p2.getIndexX()][p2.getIndexY()]=null;
-        gameView.postInvalidate();
     }
 
 
