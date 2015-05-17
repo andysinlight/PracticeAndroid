@@ -154,30 +154,40 @@ public class GameServiceImpl implements GameService {
 //            map.putAll(m2);
 //        }
 
-        if(compareChannelX(p1UP, p2UP).size()!=0){
-            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelX(p1UP,p2UP);
+        if(compareChannelY(p1UP, p2UP).size()!=0){
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelY(p1UP, p2UP);
             map.putAll(m1);
         }
-        if(compareChannelX(p1Down,p2Down).size()!=0){
-            HashMap<Point,Point> m2 =(HashMap<Point,Point>)compareChannelX(p1Down,p1Down);
+        if(compareChannelY(p1Down, p2Down).size()!=0){
+            HashMap<Point,Point> m2 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
             map.putAll(m2);
         }
-        if(compareChannelX(p1Left,p2Left).size()!=0){
-            HashMap<Point,Point> m3 =(HashMap<Point,Point>)compareChannelX(p1Left,p1Left);
-            map.putAll(m3);
+        if(compareChannelY(p1Down, p2UP).size()!=0){
+            HashMap<Point,Point> m2 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
+            map.putAll(m2);
         }
-        if(compareChannelX(p1UP,p2Down).size()!=0){
-            HashMap<Point,Point> m4 =(HashMap<Point,Point>)compareChannelX(p1UP,p2Down);
+        if(compareChannelY(p1UP, p2Down).size()!=0){
+            HashMap<Point,Point> m4 =(HashMap<Point,Point>)compareChannelY(p1UP,p2Down);
             map.putAll(m4);
         }
-        if(compareChannelX(p1Right,p2Left).size()!=0){
-            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
-            map.putAll(m5);
+        if(compareChannelX(p1Left, p2Left).size()!=0){
+            HashMap<Point,Point> m3 =(HashMap<Point,Point>)compareChannelX(p1Left, p1Left);
+            map.putAll(m3);
         }
         if(compareChannelX(p1Right,p2Right).size() !=0){
             HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Right);
             map.putAll(m5);
         }
+
+        if(compareChannelX(p1Right,p2Left).size()!=0){
+            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
+            map.putAll(m5);
+        }
+        if(compareChannelX(p1Left,p2Right).size()!=0){
+            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
+            map.putAll(m5);
+        }
+
 
         return map ;
     }
