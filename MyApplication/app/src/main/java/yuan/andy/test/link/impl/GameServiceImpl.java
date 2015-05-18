@@ -126,7 +126,23 @@ public class GameServiceImpl implements GameService {
         if(map!=null) {
             return handMap(p1, p2, map);
         }
-        return null;
+
+        if(handHeadEnd(p1,p2)!=null){
+            return handHeadEnd(p1,p2);
+        }
+            return  null ;
+    }
+
+    public LinkInfo handHeadEnd(Piece p1,Piece p2){
+       if(p1.getIndexY()==0&&p2.getIndexY()==0||
+               p1.getIndexY()==(pieces[0].length-1)&&p2.getIndexY()==(pieces[0].length-1)){
+           return new LinkInfo(p1.getPieceCenter(),p2.getPieceCenter());
+       }
+        if(p1.getIndexX()==0&&p2.getIndexX()==0||
+                p1.getIndexX()==(pieces.length-1)&&p2.getIndexX()==(pieces.length-1)){
+            return new LinkInfo(p1.getPieceCenter(),p2.getPieceCenter());
+        }
+        return null ;
     }
 
     public HashMap<Point,Point> handTwoCorner(Piece p1,Piece p2){
@@ -156,40 +172,82 @@ public class GameServiceImpl implements GameService {
 
         if(compareChannelY(p1UP, p2UP).size()!=0){
             HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelY(p1UP, p2UP);
-            map.putAll(m1);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
         }
+
         if(compareChannelY(p1Down, p2Down).size()!=0){
-            HashMap<Point,Point> m2 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
-            map.putAll(m2);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
+
         }
         if(compareChannelY(p1Down, p2UP).size()!=0){
-            HashMap<Point,Point> m2 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
-            map.putAll(m2);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelY(p1Down, p1Down);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
         }
         if(compareChannelY(p1UP, p2Down).size()!=0){
-            HashMap<Point,Point> m4 =(HashMap<Point,Point>)compareChannelY(p1UP,p2Down);
-            map.putAll(m4);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelY(p1UP,p2Down);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
         }
         if(compareChannelX(p1Left, p2Left).size()!=0){
-            HashMap<Point,Point> m3 =(HashMap<Point,Point>)compareChannelX(p1Left, p1Left);
-            map.putAll(m3);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelX(p1Left, p1Left);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
+
         }
         if(compareChannelX(p1Right,p2Right).size() !=0){
-            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Right);
-            map.putAll(m5);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Right);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
+
         }
 
         if(compareChannelX(p1Right,p2Left).size()!=0){
-            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
-            map.putAll(m5);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
+
         }
         if(compareChannelX(p1Left,p2Right).size()!=0){
-            HashMap<Point,Point> m5 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
-            map.putAll(m5);
+            HashMap<Point,Point> m1 =(HashMap<Point,Point>)compareChannelX(p1Right,p2Left);
+            if(blockMap(m1)){
+                map.putAll(m1);
+            }
+
         }
+        if(map.size()!=0){
+            return  map ;
+        }
+        return null ;
+    }
 
-
-        return map ;
+    public boolean blockMap(HashMap<Point,Point> map){
+        Point pKey=null ;
+        Point pValue = null ;
+        if(map!=null){
+            for(Point p :map.keySet()){
+                pKey = p ;
+                pValue = map.get(p);
+                Log.i("andy","blockMAp"+p.toString()+"Value"+pValue.toString());
+            }
+        }
+        if(pKey!=null&&pKey.x==pValue.x){
+            return isBlockX(pKey,pValue);
+        }
+        if(pKey!=null&&pKey.y==pValue.y){
+           return isBlockY(pKey,pValue);
+        }
+        return false ;
     }
 
     public LinkInfo handMap(Piece p1,Piece p2,Map<Point,Point> map){
@@ -359,6 +417,9 @@ public class GameServiceImpl implements GameService {
     }
 
     public boolean isBlockX(Piece p1,Piece p2){
+        if(p1.getIndexX()>p2.getIndexX()){
+            return isBlockX(p2,p1);
+        }
        int a = p1.getPieceCenter().y+config.getDEFAULT_HEIGH();
         int b = p2.getPieceCenter().y-config.getDEFAULT_HEIGH()+20;
         for(int i=a;i<b;i=i+config.getDEFAULT_HEIGH()){
@@ -371,8 +432,25 @@ public class GameServiceImpl implements GameService {
 //        Log.i("andy_findpie","not has find pieceX ");
         return true ;
     }
+    public boolean isBlockX(Point p1,Point p2){
+        if(p1.x>p2.x){
+            return isBlockX(p2,p1);
+        }
+        int a = p1.y+config.getDEFAULT_HEIGH();
+        int b = p2.y-config.getDEFAULT_HEIGH();
+        for(int i=a;i<b;i=i+config.getDEFAULT_HEIGH()){
+            Point p = new Point(p1.x,i);
+            if(findPiece(p)!=null){
+                return false ;
+            }
+        }
+        return true ;
+    }
 
     public boolean isBlockY(Piece p1,Piece p2){
+        if(p1.getIndexY()>p2.getIndexY()){
+            return isBlockX(p2,p1);
+        }
         int a = p1.getPieceCenter().x+config.getDEFAULT_HEIGH();
         int b = p2.getPieceCenter().x-config.getDEFAULT_HEIGH()+20;
         for(int i=a;i<b;i=i+config.getDEFAULT_HEIGH()){
@@ -385,4 +463,20 @@ public class GameServiceImpl implements GameService {
 //        Log.i("andy_findpie","not has find pieceY ");
         return true ;
     }
+
+    public boolean isBlockY(Point p1,Point p2){
+        if(p1.y>p2.y){
+            return isBlockX(p2,p1);
+        }
+        int a = p1.x+config.getDEFAULT_HEIGH();
+        int b = p2.x-config.getDEFAULT_HEIGH();
+        for(int i=a;i<b;i=i+config.getDEFAULT_HEIGH()){
+            Point p = new Point(i,p1.y);
+            if(findPiece(p)!=null){
+                return false ;
+            }
+        }
+        return true ;
+    }
+
 }
